@@ -9,12 +9,13 @@ import React from 'react';
 
 const NavBar = () => {
   const { data: session, status } = useSession();
+  const logoHref = session ? '/traveler/trips' : '/';
 
   return (
     <nav className=' bg-white shadow-md py-4 border-b border-gray-200'>
       <div className='container mx-auto flex justify-between items-center px-6 lg:px-8'>
         <Link
-          href={'/'}
+          href={logoHref}
           className='flex items-center space-x-3'
           aria-label='Home'
         >

@@ -1,7 +1,5 @@
 'use client';
 
-import { getServerSession } from 'next-auth';
-import { authOptions } from './api/auth/[...nextauth]/route';
 import { useRouter } from 'next/navigation';
 import { useSession } from 'next-auth/react';
 import { useEffect } from 'react';
@@ -16,7 +14,7 @@ const HomePage = () => {
     if (session.status === 'authenticated') {
       router.replace('/traveler/trips');
     }
-  }, [session, router]);
+  }, [session, router])
 
   return (
     <>
