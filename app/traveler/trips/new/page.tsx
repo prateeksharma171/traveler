@@ -14,11 +14,13 @@ import { useState } from 'react';
 import { Clock, FileText, MapPin, PlusCircle } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 const NewTrip = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [uploading, setUploading] = useState(false);
   const { data: session } = useSession();
+  const router = useRouter();
   const initialValues = {
     tripName: '',
     destination: '',
@@ -54,6 +56,7 @@ const NewTrip = () => {
         toast.error(res.error);
       } else {
         toast.success(res.message || 'Trip created!');
+        router.replace('/traveler/trips');
       }
     } catch (err) {
       console.error(err);
