@@ -5,6 +5,7 @@ import { useSession } from 'next-auth/react';
 import { useEffect } from 'react';
 import NavBar from '@/components/global/NavBar';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const HomePage = () => {
   const session = useSession();
@@ -14,7 +15,7 @@ const HomePage = () => {
     if (session.status === 'authenticated') {
       router.replace('/traveler/trips');
     }
-  }, [session, router])
+  }, [session, router]);
 
   return (
     <>
@@ -43,10 +44,12 @@ const HomePage = () => {
         <section className='py-16 px-6 mb-24'>
           <div className='max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 text-center'>
             <div className='cursor-pointer'>
-              <img
+              <Image
                 src={'/travel1.jpg'}
                 alt='Explore'
                 className='w-full h-full object-cover object-center mx-auto mb-4 rounded-xl shadow'
+                width={100}
+                height={100}
               />
               <h3 className='text-xl font-semibold mb-2'>
                 Explore Destinations
@@ -56,10 +59,12 @@ const HomePage = () => {
               </p>
             </div>
             <div className='cursor-pointer'>
-              <img
+              <Image
                 src={'/travel2.jpg'}
                 alt='Plan'
                 className='w-full h-full object-cover object-center mx-auto mb-4 rounded-xl shadow'
+                width={100}
+                height={100}
               />
               <h3 className='text-xl font-semibold mb-2'>Plan Your Trip</h3>
               <p>
@@ -67,10 +72,12 @@ const HomePage = () => {
               </p>
             </div>
             <div className='cursor-pointer'>
-              <img
+              <Image
                 src={'/travel3.jpg'}
                 alt='Enjoy'
                 className='w-full h-full object-cover object-center mx-auto mb-4 rounded-xl shadow'
+                width={100}
+                height={100}
               />
               <h3 className='text-xl font-semibold mb-2'>Enjoy the Journey</h3>
               <p>

@@ -1,5 +1,5 @@
 {
-  "name": "prisma-client-170543f8887c600517a63199c2fd5080130376c2bffc39435fdb6bcded87a95a",
+  "name": "prisma-client-97c16d6138dbea777fc941025dbdf1987a4ee87b95ae5d7a456b4d705a58bee0",
   "main": "index.js",
   "types": "index.d.ts",
   "browser": "index-browser.js",
@@ -81,6 +81,10 @@
     },
     "./runtime/client": {
       "types": "./runtime/client.d.ts",
+      "node": {
+        "require": "./runtime/client.js",
+        "default": "./runtime/client.js"
+      },
       "require": "./runtime/client.js",
       "import": "./runtime/client.mjs",
       "default": "./runtime/client.mjs"
@@ -141,6 +145,6 @@
     },
     "./*": "./*"
   },
-  "version": "6.11.1",
+  "version": "6.12.0",
   "sideEffects": false
 }

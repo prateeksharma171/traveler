@@ -8,7 +8,7 @@ import Link from 'next/link';
 import React from 'react';
 
 const NavBar = () => {
-  const { data: session, status } = useSession();
+  const { data: session } = useSession();
   const logoHref = session ? '/traveler/trips' : '/';
 
   return (

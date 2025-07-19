@@ -16,12 +16,13 @@ const NotFound = () => {
           Page Not Found
         </h2>
         <p className='mt-2 text-lg text-gray-600 dark:text-gray-400'>
-          Sorry, the page you are looking for doesn't exist or has been moved.
+          Sorry, the page you are looking for doesn&apos;t exist or has been
+          moved.
         </p>
 
         <div
           className='mt-6 inline-flex items-center gap-2 cursor-pointer text-white bg-[#618cab] dark:bg-[#618cab] dark:text-black hover:opacity-90 px-6 py-3 rounded-xl transition'
-          onClick={() => router.push('/')}
+          onClick={() => router.push('/traveler/trips')}
         >
           <ArrowLeft className='w-5 h-5' />
           Go back home
